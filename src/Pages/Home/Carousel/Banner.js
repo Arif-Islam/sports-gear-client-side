@@ -5,6 +5,7 @@ import img1 from '../../../images/slider/footballnet.jpg';
 import img2 from '../../../images/slider/cricket.jpg';
 import img3 from '../../../images/slider/rugby.jpg';
 import img4 from '../../../images/slider/tabletennis.jpg';
+import './Banner.css';
 
 const Banner = () => {
     const images = [
@@ -25,21 +26,21 @@ const Banner = () => {
             img: img4
         },
     ]
-    
+
     return (
         <div>
-            <Carousel autoplay infiniteLoop interval={5000} showThumbs={false}>
+            <Carousel autoPlay infiniteLoop interval={5000} showThumbs={false}>
                 <div>
-                    <img className='w-full h-[650px] object-cover' src={img1} />
+                    <img className='w-full h-[450px] md:h-[450px] object-cover' src={img1} />
                 </div>
                 <div>
-                    <img className='w-full h-[650px] object-cover' src={img2} />
+                    <img className='w-full h-[450px] md:h-[450px] object-cover' src={img2} />
                 </div>
                 <div>
-                    <img className='w-full h-[650px] object-cover' src={img3} />
+                    <img className='w-full h-[450px] md:h-[450px] object-cover' src={img3} />
                 </div>
                 <div>
-                    <img className='w-full h-[650px] object-cover' src={img4} />
+                    <img className='w-full h-[450px] md:h-[450px] object-cover' src={img4} />
                 </div>
             </Carousel>
         </div >
