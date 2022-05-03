@@ -31,7 +31,7 @@ const Navbar = () => {
                         </div>
                     }
                 </div>
-                <div className={(showNav ? "top-[75px] bg-blue-50" : "-top-full") + " fixed md:static md:flex text-black h-[230px] md:h-auto rounded w-full space-y-3 md:space-y-0 items-center md:w-auto md:space-x-6 transition-top duration-500 ease-in-out uppercase font-semibold text-stone-200 text-center"}>
+                <div className={(showNav ? "top-[75px] bg-blue-50" : "-top-full") + " fixed md:static md:flex text-black h-[230px] md:h-auto rounded w-full space-y-3 md:space-y-0 items-center md:w-auto md:space-x-6 transition-top duration-500 ease-in-out uppercase font-semibold text-black text-center"}>
                     <div className='mt-2 md:mt-0 hover:text-[#0E9CF6]'>
                         <NavLink to='/'>Home</NavLink>
                     </div>
