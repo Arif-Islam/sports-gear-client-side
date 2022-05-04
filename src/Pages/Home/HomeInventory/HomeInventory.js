@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
 import './HomeInventory.css';
 
@@ -25,6 +26,11 @@ const HomeInventory = () => {
                                 item={item}
                             ></ItemCard>)
                         }
+                    </div>
+                    <div className='flex justify-center mt-10'>
+                        <button className='w-56 bg-gray-800 py-2 text-white border-2 border-gray-700 rounded-sm hover:bg-stone-200 hover:text-black'>
+                            <Link to='/'>Manage Inventory</Link>
+                        </button>
                     </div>
                 </div>
             </div>
