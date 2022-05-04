@@ -35,7 +35,7 @@ const Banner = () => {
             <div className="flex justify-center">
                 <div className='absolute bottom-14'>
                     <button className='font-medium text-xl text-black bg-white border-2 w-60 py-1 mx-auto border-white hover:text-white hover:bg-gray-900 hover:border-gray-900 uppercase'>
-                        <Link to='/'>See Inventory</Link>
+                        <Link to='/manageinventory'>See Inventory</Link>
                     </button>
                 </div>
             </div>

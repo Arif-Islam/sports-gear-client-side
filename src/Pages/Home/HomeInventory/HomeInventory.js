@@ -21,7 +21,7 @@ const HomeInventory = () => {
                 <div className='w-4/5 mx-auto pb-16'>
                     <div className='flex gap-10 flex-wrap items-center justify-center'>
                         {
-                            items.map(item => <ItemCard
+                            items.slice(0,6).map(item => <ItemCard
                                 key={item._id}
                                 item={item}
                             ></ItemCard>)
@@ -29,7 +29,7 @@ const HomeInventory = () => {
                     </div>
                     <div className='flex justify-center mt-10'>
                         <button className='w-56 bg-gray-800 py-2 text-white border-2 border-gray-700 rounded-sm hover:bg-stone-200 hover:text-black'>
-                            <Link to='/'>Manage Inventory</Link>
+                            <Link to='/manageinventory'>Manage Inventory</Link>
                         </button>
                     </div>
                 </div>

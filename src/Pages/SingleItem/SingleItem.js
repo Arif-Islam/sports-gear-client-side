@@ -32,15 +32,10 @@ const SingleItem = () => {
             })
     }
     // console.log(item);
-    let num;
-    // const getValue = event => {
-    //     num = event.target.value;
-    //     console.log('num', num);
-    // }
 
     const increaseQuantity = (id) => {
         let quantity = item.quantity;
-        num = parseInt(input);
+        let num = parseInt(input);
         console.log(input);
         quantity += num;
         quantity = parseInt(quantity);

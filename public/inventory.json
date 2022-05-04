@@ -4,7 +4,7 @@
         "price": "$100",
         "description": "GM Sting Willow Cricket Bat is popular among national players. It has round handle, concave edges. Specially designed Scale Bat Handle Grip.",
         "image": "https://i.ibb.co/m5rNjnQ/cricketbat.webp",
-        "quantity": 8,
+        "quantity": 42,
         "supplier": "Forex Trades"
     },
     {
@@ -12,7 +12,7 @@
         "price": "$546",
         "description": "Polyester is used as backing material to hold the ball's oval shape and to enhance performance. The ball is stitched with polyester thread and coated with wax to make it more water-resistant.",
         "image": "https://i.ibb.co/qM3zjC5/rugbyball.webp",
-        "quantity": 6,
+        "quantity": 15,
         "supplier": "Bulk Demand"
     },
     {
@@ -20,7 +20,7 @@
         "price": "$300",
         "description": "A great sport glove for spring and summer rides, the Klaw 2 combines goatskin and flexible neoprene making it comfortable to wear all day.",
         "image": "https://i.ibb.co/fMYZ3kV/boxinggloves.webp",
-        "quantity": 5,
+        "quantity": 10,
         "supplier": "Strict Supply"
     },
     {
@@ -28,7 +28,7 @@
         "price": "$200",
         "description": "The round-shape head with box-shape frame cross section gives Carbonex a unique and solid feeling. For players who seek a solid feel from the strings at impact. ",
         "image": "https://i.ibb.co/GR0J4cY/racket.webp",
-        "quantity": 10,
+        "quantity": 14,
         "supplier": "Inventory Wholesale"
     },
     {
@@ -36,7 +36,7 @@
         "price": "$400",
         "description": "Excellent & Smooth finish, High quality, ball-bearings for a smooth ride. Ideal For Unisex. Available in multiple colour",
         "image": "https://i.ibb.co/fNZJjjS/skateboard.webp",
-        "quantity": 4,
+        "quantity": 22,
         "supplier": "Glorious Goods"
     },
     {
@@ -44,7 +44,39 @@
         "price": "$100",
         "description": "Grip with comfort, Rubber padded bat, Easy bounce back mechanism. TT RACKET-2,TT BALL-3, TABLE TENNIS GRID FOLDING TYPE WITH PUSH CLAMPS. ",
         "image": "https://i.ibb.co/kMv6mmN/tabletennisbat.webp",
-        "quantity": 7,
+        "quantity": 17,
         "supplier": "Wholesale Solutions"
+    },
+    {
+        "name": "Optipro Gaming Helmet",
+        "price": "$300",
+        "description": "Polypropylene high-impact resistant outer shell. Classic four vents for free flow air circulation. Sweat absorbent lining.",
+        "image": "https://i.ibb.co/94q1ZPH/gaminghelmet.webp",
+        "quantity": 20,
+        "supplier": "You to Retail"
+    },
+    {
+        "name": "Klapp Bowling Set",
+        "price": "$1580",
+        "description": "Lightweight ball and pins, Safe for indoor use, Designed to last, Includes 1 4.5-lbs. blue/red rubber bowling ball and 10 white plastic pins.",
+        "image": "https://i.ibb.co/vJBZhhR/baseballs.webp",
+        "quantity": 8,
+        "supplier": "Bulk Demand"
+    },
+    {
+        "name": "Amet Tennis Racquet",
+        "price": "$300",
+        "description": "This tennis racket is designed using premium grade graphite/aluminum and comes in the 4-3/8 inches size. This product comes with a new frame shape that offers boosted power.",
+        "image": "https://i.ibb.co/3TJnf0d/tennisbat.webp",
+        "quantity": 15,
+        "supplier": "Large Scale"
+    },
+    {
+        "name": "Pool Table Ball Set",
+        "price": "$200",
+        "description": "Grade A deluxe quality, regulation size and weight. Made of polyester resin - 6 ounce balls. Art number style - Price shown is for full set of balls including cue ball.",
+        "image": "https://i.ibb.co/gz8FRQ8/poolball.webp",
+        "quantity": 13,
+        "supplier": "District Wholesale"
     }
 ]

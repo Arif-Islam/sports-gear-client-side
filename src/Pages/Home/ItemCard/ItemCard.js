@@ -12,7 +12,7 @@ const ItemCard = (props) => {
         <div className='bg-white w-[400px]  overflow-hidden'>
             <div className='flex flex-col items-center justify-center border border-gray-200 rounded'>
                 <img className='w-80 h-96 object-cover mx-auto hover:opacity-60 ' src={image} alt="" />
-                <div className='bg-[#F6F6F6] px-4 h-[340px] md:h-72 flex flex-col justify-center items-start'>
+                <div className='bg-[#F6F6F6] px-4 h-[340px] md:h-72 flex flex-col justify-center items-start overflow-hidden'>
                     <h1 className='text-xl font-semibold text-indigo-600 pb-2' >{name}</h1>
                     <h2 className='text-gray-600 pb-1 text-base'>{description}</h2>
                     <h2 className='text-xl font-medium text-indigo-500 pb-1'>Price: <span className='text-amber-400 font-semibold '>{price}</span></h2>

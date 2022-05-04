@@ -8,6 +8,8 @@ import Contact from './Pages/Contact/Contact';
 import Login from './Pages/Login/Login';
 import Footer from './Shared/Footer/Footer';
 import SingleItem from './Pages/SingleItem/SingleItem';
+import AllInventories from './Pages/AllInventories/AllInventories';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -17,10 +19,12 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/inventory/:id' element={<SingleItem></SingleItem>}></Route>
+        <Route path='/manageinventory' element={<AllInventories></AllInventories>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
