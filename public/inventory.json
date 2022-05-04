@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Willow Cricket Bat",
+        "price": "$100",
+        "description": "GM Sting Willow Cricket Bat is popular among national players. It has round handle, concave edges. Specially designed Scale Bat Handle Grip.",
+        "image": "https://i.ibb.co/m5rNjnQ/cricketbat.webp",
+        "quantity": 8,
+        "supplier": "Forex Trades"
+    },
+    {
+        "name": "Synthetic Rugby Ball",
+        "price": "$546",
+        "description": "Polyester is used as backing material to hold the ball's oval shape and to enhance performance. The ball is stitched with polyester thread and coated with wax to make it more water-resistant.",
+        "image": "https://i.ibb.co/qM3zjC5/rugbyball.webp",
+        "quantity": 6,
+        "supplier": "Bulk Demand"
+    },
+    {
+        "name": "Motorcycle Riding Gloves",
+        "price": "$300",
+        "description": "A great sport glove for spring and summer rides, the Klaw 2 combines goatskin and flexible neoprene making it comfortable to wear all day.",
+        "image": "https://i.ibb.co/fMYZ3kV/boxinggloves.webp",
+        "quantity": 5,
+        "supplier": "Strict Supply"
+    },
+    {
+        "name": "Carbonex Racket",
+        "price": "$200",
+        "description": "The round-shape head with box-shape frame cross section gives Carbonex a unique and solid feeling. For players who seek a solid feel from the strings at impact. ",
+        "image": "https://i.ibb.co/GR0J4cY/racket.webp",
+        "quantity": 10,
+        "supplier": "Inventory Wholesale"
+    },
+    {
+        "name": "Klapp Skateboard",
+        "price": "$400",
+        "description": "Excellent & Smooth finish, High quality, ball-bearings for a smooth ride. Ideal For Unisex. Available in multiple colour",
+        "image": "https://i.ibb.co/fNZJjjS/skateboard.webp",
+        "quantity": 4,
+        "supplier": "Glorious Goods"
+    },
+    {
+        "name": "Konex Table Tennis Combo",
+        "price": "$100",
+        "description": "Grip with comfort, Rubber padded bat, Easy bounce back mechanism. TT RACKET-2,TT BALL-3, TABLE TENNIS GRID FOLDING TYPE WITH PUSH CLAMPS. ",
+        "image": "https://i.ibb.co/kMv6mmN/tabletennisbat.webp",
+        "quantity": 7,
+        "supplier": "Wholesale Solutions"
+    }
+]

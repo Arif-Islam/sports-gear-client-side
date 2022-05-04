@@ -14,7 +14,7 @@ const Navbar = () => {
     //     navigate('/login');
     // }
     return (
-        <div className='bg-blue-50 sticky top-0 z-20 py-2'>
+        <div className='bg-gray-100 sticky top-0 z-20 py-2'>
             <div className='md:flex items-center justify-between w-full md:w-11/12 lg:w-4/5 2xl:w-3/4 mx-auto '>
                 <div className='flex justify-between items-center w-4/5 mx-auto'>
                     <Link to='/home'>
@@ -31,7 +31,7 @@ const Navbar = () => {
                         </div>
                     }
                 </div>
-                <div className={(showNav ? "top-[75px] bg-blue-50" : "-top-full") + " fixed md:static md:flex text-black h-[230px] md:h-auto rounded w-full space-y-3 md:space-y-0 items-center md:w-auto md:space-x-6 transition-top duration-500 ease-in-out uppercase font-semibold text-black text-center"}>
+                <div className={(showNav ? "top-[75px] bg-gray-100" : "-top-full") + " fixed md:static md:flex text-black h-[230px] md:h-auto rounded w-full space-y-3 md:space-y-0 items-center md:w-auto md:space-x-6 transition-top duration-500 ease-in-out uppercase font-semibold text-black text-center"}>
                     <div className='mt-2 md:mt-0 hover:text-[#0E9CF6]'>
                         <NavLink to='/'>Home</NavLink>
                     </div>

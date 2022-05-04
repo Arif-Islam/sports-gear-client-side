@@ -8,25 +8,6 @@ import img4 from '../../../images/slider/tabletennis.jpg';
 import './Banner.css';
 
 const Banner = () => {
-    const images = [
-        {
-            id: 1,
-            img: img1
-        },
-        {
-            id: 2,
-            img: img2
-        },
-        {
-            id: 3,
-            img: img3
-        },
-        {
-            id: 4,
-            img: img4
-        },
-    ]
-
     return (
         <div>
             <Carousel autoPlay infiniteLoop interval={5000} showThumbs={false}>
