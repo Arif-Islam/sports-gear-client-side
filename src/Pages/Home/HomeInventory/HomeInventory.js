@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
 import './HomeInventory.css';
 
 const HomeInventory = () => {
     const [items, setItems] = useState([]);
+    const navigate = useNavigate();
+    const goToManageInventory = () => {
+        navigate('/manageinventory');
+    }
 
     useEffect(() => {
         fetch('http://localhost:5000/items')
@@ -28,8 +32,8 @@ const HomeInventory = () => {
                         }
                     </div>
                     <div className='flex justify-center mt-10'>
-                        <button className='w-56 bg-gray-800 py-2 text-white border-2 border-gray-700 rounded-sm hover:bg-stone-200 hover:text-black'>
-                            <Link to='/manageinventory'>Manage Inventory</Link>
+                        <button onClick={goToManageInventory} className='w-56 bg-gray-800 py-2 text-white border-2 border-gray-700 rounded-sm hover:bg-stone-200 hover:text-black'>
+                            Manage Inventory
                         </button>
                     </div>
                 </div>

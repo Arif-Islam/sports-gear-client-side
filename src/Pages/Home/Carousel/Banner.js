@@ -6,9 +6,14 @@ import img2 from '../../../images/slider/cricket.jpg';
 import img3 from '../../../images/slider/rugby.jpg';
 import img4 from '../../../images/slider/tabletennis.jpg';
 import './Banner.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Banner = () => {
+    const navigate = useNavigate();
+    const gotomanageinventory = () => {
+        navigate('/manageinventory');
+    }
+
     return (
         <div className='relative'>
             <Carousel autoPlay infiniteLoop interval={5000} showThumbs={false}>
@@ -34,8 +39,8 @@ const Banner = () => {
             </div>
             <div className="flex justify-center">
                 <div className='absolute bottom-14'>
-                    <button className='font-medium text-xl text-black bg-white border-2 w-60 py-1 mx-auto border-white hover:text-white hover:bg-gray-900 hover:border-gray-900 uppercase'>
-                        <Link to='/manageinventory'>See Inventory</Link>
+                    <button onClick={gotomanageinventory} className='font-medium text-xl text-black bg-white border-2 w-60 py-1 mx-auto border-white hover:text-white hover:bg-gray-900 hover:border-gray-900 uppercase'>
+                        See Inventory
                     </button>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='bg-gray-100 sticky top-0 z-20 py-2'>
             <div className='md:flex items-center justify-between w-full md:w-11/12 lg:w-4/5 2xl:w-3/4 mx-auto '>
                 <div className='flex justify-between items-center w-4/5 mx-auto'>
-                    <Link to='/home'>
+                    <Link to='/'>
                         <img className='w-24' src={logo} alt="site logo" />
                     </Link>
                     {showNav ?
