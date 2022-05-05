@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ItemCard from '../Home/ItemCard/ItemCard';
 import './AllInventories.css';
 import TabularItem from './TabularItem/TabularItem';
 
@@ -17,7 +16,7 @@ const AllInventories = () => {
             <h1 className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-4'>Manage Inventories</h1>
             <div className='flex justify-center'>
                 <button className='w-56 hover:bg-gray-200 py-2 hover:text-gray-900 border-2 border-gray-700 rounded-sm bg-stone-200 text-black mb-10'>
-                    <Link to='/'>Add New Item</Link>
+                    <Link to='/addnewitem'>Add New Item</Link>
                 </button>
             </div>
             <h1 className="text-2xl pt-6 pb-6 text-center bg-gray-100">All items</h1>

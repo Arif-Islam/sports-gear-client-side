@@ -10,6 +10,7 @@ import Footer from './Shared/Footer/Footer';
 import SingleItem from './Pages/SingleItem/SingleItem';
 import AllInventories from './Pages/AllInventories/AllInventories';
 import NotFound from './Pages/NotFound/NotFound';
+import AddNewItem from './Pages/AddNewItem/AddNewItem';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/inventory/:id' element={<SingleItem></SingleItem>}></Route>
         <Route path='/manageinventory' element={<AllInventories></AllInventories>}></Route>
+        <Route path='/addnewitem' element={<AddNewItem></AddNewItem>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
