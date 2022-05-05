@@ -11,7 +11,7 @@ const AllInventories = () => {
         fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setItems(data));
-    }, []);
+    }, [items]);
     return (
         <div>
             <h1 className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-4'>Manage Inventories</h1>
@@ -22,17 +22,15 @@ const AllInventories = () => {
             </div>
             <h1 class="text-2xl pt-6 pb-6 text-center bg-gray-100">All items</h1>
             <div className='bg-gray-100'>
-                <div className='w-[1500px] mx-auto'>
-                    <thead class="bg-gray-200 border-b-2 border-gray-200 ">
-                        <tr>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-center">Image</th>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-right">Name</th>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-right">Price</th>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-center">Quantity</th>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-center">Supplier</th>
-                            <th class="w-1/12 p-3 text-sm font-semibold tracking-wide text-center"></th>
-                        </tr>
-                    </thead>
+                <div className='w-full md:w-3/4 2xl:w-1/2 mx-auto'>
+                    <div className='flex bg-gray-200 flex-wrap'>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Image</p>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Name</p>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Price</p>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Quantity</p>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Supplier</p>
+                        <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Remove Item</p>
+                    </div>
                 </div>
             </div>
             {/* <hr className='w-32 border border-indigo-500 mx-auto mb-6' /> */}
@@ -42,7 +40,7 @@ const AllInventories = () => {
                     item={item}
                 ></TabularItem>)
             }
-            <div className='pb-6'></div>
+            <div className='h-10 bg-gray-100'></div>
 
         </div>
 

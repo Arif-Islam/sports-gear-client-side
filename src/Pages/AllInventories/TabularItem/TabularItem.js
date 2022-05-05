@@ -1,44 +1,34 @@
 import React from 'react';
 
 const TabularItem = (props) => {
-    const {_id, name, image, price, quantity, supplier} = props.item;
+    const { _id, name, image, price, quantity, supplier } = props.item;
     return (
         <div className=''>
             <div class="bg-gray-100">
-                <div class="overflow-auto rounded-lg shadow hidden md:block">
-                    <table class="w-3/5 mx-auto">
-                        
-                        <tbody class="divide-y divide-gray-100">
-                            <tr class="bg-white border-b-2 border-t-1">
-                                <td class="w-1/12">
-                                    <img className='w-20 mx-auto' src={image} alt="" />
-                                </td>
-                                <td class="w-1/12 text-center text-sm text-gray-700 whitespace-nowrap">
-                                    {name}
-                                </td>
-                                <td class="w-1/12 text-center text-sm text-gray-700 whitespace-nowrap">{price} </td>
-                                <td class="w-1/12 text-center text-sm text-gray-700 whitespace-nowrap">{quantity} </td>
-                                <td class="w-1/12 text-center text-sm text-gray-700 whitespace-nowrap">{supplier} </td>
-                                <td class="w-1/12 text-center text-sm text-gray-700 whitespace-nowrap">
-                                    <button
-                                        class="p-1.5 text-xs font-medium uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-50 hover:bg-red-300">Remove</button>
-                                </td>
-                            </tr>
-                            {/* <tr class="bg-gray-50">
-                                <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-                                    <a href="#" class="font-bold text-blue-500 hover:underline">10002</a>
-                                </td>
-                                <td class="p-3 text-sm text-gray-700 whitespace-nowrap">Kring New Fit office chair, mesh + PU, black</td>
-                                <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-                                    <span
-                                        class="p-1.5 text-xs font-medium uppercase tracking-wider text-yellow-800 bg-yellow-200 rounded-lg bg-opacity-50">Shipped</span>
-                                </td>
-                                <td class="p-3 text-sm text-gray-700 whitespace-nowrap">16/10/2021</td>
-                                <td class="p-3 text-sm text-gray-700 whitespace-nowrap">$200.00</td>
-                            </tr> */}
+                <div class="rounded-lg shadow ">
+                    <div className='w-full md:w-3/4 2xl:w-1/2 mx-auto'>
+                        <div className='flex bg-white'>
+                            <div className='w-2/12 border-[1px] md:border-2 border-gray-100'>
+                                <img className='w-20 mx-auto' src={image} alt="" />
+                            </div>
+                            <div className='w-2/12 flex items-center justify-center border-[1px] md:border-2 border-gray-100'>
+                                <p className='text-center text-sm text-gray-700'>{name} </p>
+                            </div>
+                            <div className='w-2/12 flex items-center justify-center border-[1px] md:border-2 border-gray-100'>
+                                <p className='text-center text-sm text-gray-700'>{price} </p>
+                            </div>
+                            <div className='w-2/12 flex items-center justify-center border-[1px] md:border-2 border-gray-100'>
+                                <p className='text-center text-sm text-gray-700'>{quantity} </p>
+                            </div>
+                            <div className='w-2/12 flex items-center justify-center border-[1px] md:border-2 border-gray-100'>
+                                <p className='text-center text-sm text-gray-700'>{supplier} </p>
+                            </div>
+                            <div className='w-2/12 flex items-center justify-center border-[1px] md:border-2 border-gray-100'>
+                                <button className='p-1.5 text-xs font-bold uppercase tracking-wider text-red-800 bg-red-200 rounded-lg bg-opacity-50'>Remove </button>
+                            </div>
 
-                        </tbody>
-                    </table>
+                        </div>
+                    </div>
                 </div>
 
                 {/* <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:hidden">
