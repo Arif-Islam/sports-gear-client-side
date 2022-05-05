@@ -20,7 +20,7 @@ const AllInventories = () => {
                     <Link to='/'>Add New Item</Link>
                 </button>
             </div>
-            <h1 class="text-2xl pt-6 pb-6 text-center bg-gray-100">All items</h1>
+            <h1 className="text-2xl pt-6 pb-6 text-center bg-gray-100">All items</h1>
             <div className='bg-gray-100'>
                 <div className='w-full md:w-3/4 2xl:w-1/2 mx-auto'>
                     <div className='flex bg-gray-200 flex-wrap'>
