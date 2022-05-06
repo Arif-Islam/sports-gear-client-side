@@ -56,14 +56,14 @@ const SingleItem = () => {
     }
 
     return (
-        <div className='bg-gray-200 pb-10 2xl:pt-20 h-screen'>
+        <div className='bg-gray-200 pb-10 2xl:pt-20 lg:h-screen'>
             <div className='w-3/4 mx-auto pt-10'>
                 <div className='flex items-center justify-center flex-col xl:flex-row gap-14 md:gap-10'>
                     <div>
                         <img className='w-[450px] rounded-sm hover:opacity-75' src={item.image} alt="" />
                     </div>
                     <div className='bg-white p-4 relative rounded-sm'>
-                        <p className='pb-1'>You accessed the item with id <br /> <span className='text-gray-600 underline'>{id}</span></p>
+                        <p className='pb-1'>You accessed the item with id <br className='2xl:hidden' /> <span className='text-gray-600 underline'>{id}</span></p>
                         <h1 className='text-xl font-semibold text-indigo-600 pb-2'>{item.name}</h1>
                         <p className='text-gray-700 pb-1'> {item.description} </p>
                         <p className='text-xl font-medium text-indigo-500 pb-1'>Price: <span className='text-amber-400 font-semibold '>{item.price}</span></p>

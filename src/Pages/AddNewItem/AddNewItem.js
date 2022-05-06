@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import auth from '../../firebase.init';
 
 const AddNewItem = () => {
     const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
     const [image, setImage] = useState('');
     const [price, setPrice] = useState('');
     const [quantity, setQuantity] = useState('');
     const [supplier, setSupplier] = useState('');
     const [description, setDescription] = useState('');
+    const [user] = useAuthState(auth);
+
+    useEffect(() => {
+
+    }, [user]);
 
     const getName = event => {
         setName(event.target.value);
@@ -29,9 +37,18 @@ const AddNewItem = () => {
         setDescription(event.target.value);
     }
 
+    const email = user?.email;
+    // if (user) {
+        // setEmail(user.email);
+    // }
+    console.log('user', user);
+    // if(user == null){
+    //     setEmail('user@gmail.com');
+    // }
+
     const handleAddItem = event => {
         event.preventDefault();
-        const item = { name, image, price, quantity, supplier, description };
+        const item = { name, email, image, price, quantity, supplier, description };
         fetch('http://localhost:5000/items', {
             method: 'POST',
             headers: {
@@ -45,7 +62,6 @@ const AddNewItem = () => {
                 console.log('item data', data);
                 toast('New Item added to inventories!');
             })
-        
     }
 
     return (

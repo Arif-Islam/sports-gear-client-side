@@ -1,9 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../images/logo-removebg-preview.png';
 import { BsGoogle } from "react-icons/bs";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { toast, ToastContainer } from 'react-toastify';
+import Spinner from '../../Shared/Spinner/Spinner';
 
 const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, PasswordReseterror] = useSendPasswordResetEmail(auth);
+
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+
+    const getEmail = event => {
+        setEmail(event.target.value);
+    }
+    const getPassword = event => {
+        setPassword(event.target.value);
+    }
+    if (user || googleUser) {
+        navigate(from, { replace: true });
+    }
+    const doLogIn = event => {
+        event.preventDefault();
+        signInWithEmailAndPassword(email, password);
+    }
+    const resetPassword = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Check your email to reset password.');
+        }
+        else {
+            toast('Please enter your Email address!');
+        }
+    }
     return (
         <div>
             <div className='flex items-center justify-center my-6'>
@@ -11,10 +53,10 @@ const Login = () => {
             </div>
             {/* <p className='text-center text-2xl font-medium my-6'>Please Login</p> */}
             <div className='flex flex-col items-center justify-center'>
-                <form className='flex flex-col space-y-5'>
-                    <input className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="email" name="email" id="" placeholder='Email' required />
+                <form onSubmit={doLogIn} className='flex flex-col space-y-5'>
+                    <input onBlur={getEmail} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="email" name="email" id="" placeholder='Email' required />
 
-                    <input className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="password" name="password" id="" placeholder='Password' required />
+                    <input onBlur={getPassword} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="password" name="password" id="" placeholder='Password' required />
 
                     <input className='bg-sky-600  font-medium text-stone-100 rounded h-10 hover:cursor-pointer hover:bg-sky-700' type="submit" value="Login" />
                 </form>
@@ -24,15 +66,22 @@ const Login = () => {
                         <Link to='/signup'>New to Sports Gear?</Link>
                     </div>
                     <div className='text-red-600 pt-3'>
-                        <button className='font-medium'>Forgot Password?</button>
+                        <button onClick={resetPassword} className='font-medium'>Forgot Password?</button>
                     </div>
                 </div>
 
-                <div className='h-6 pt-3 hidden'>
-                    <p className='font-medium' style={{ color: 'red' }}>error</p>
+                <div className='h-6 pt-3'>
+                    <p className='font-medium' style={{ color: 'red' }}>{error?.message || googleError?.message}</p>
                 </div>
+                {
+                    loading && <Spinner></Spinner>
+                }
+                {
+                    googleLoading && <Spinner></Spinner>
+                }
+
                 <hr className='w-80 mt-3 border-[1px] ' />
-                <div className='flex items-center mt-6 hover:cursor-pointer rounded-sm bg-stone-100 mb-6'>
+                <div onClick={() => signInWithGoogle()} className='flex items-center mt-6 hover:cursor-pointer rounded-sm bg-stone-100 mb-6'>
                     <div className='text-sky-600  bg-stone-100 p-2 rounded-full hover:bg-sky-600 hover:text-stone-100'>
                         <BsGoogle className='w-6 h-6 '></BsGoogle>
                     </div>
@@ -40,11 +89,8 @@ const Login = () => {
                         <p className='text-sky-600 font-medium'>Sign in with Google</p>
                     </div>
                 </div>
-
+                <ToastContainer />
             </div>
-            {/* <div className='flex items-center justify-center mb-16'>
-                
-            </div> */}
 
         </div>
     );
