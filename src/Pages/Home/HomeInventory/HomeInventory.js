@@ -32,7 +32,7 @@ const HomeInventory = () => {
                         }
                     </div>
                     <div className='flex justify-center mt-10'>
-                        <button onClick={goToManageInventory} className='w-56 bg-gray-800 py-2 text-white border-2 border-gray-700 rounded-sm hover:bg-stone-200 hover:text-black'>
+                        <button onClick={goToManageInventory} className='w-56 bg-sky-600 py-2 text-stone-100 border-2 border-sky-600 hover:border-sky-700 rounded font-medium hover:bg-sky-700 '>
                             Manage Inventory
                         </button>
                     </div>

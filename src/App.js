@@ -11,6 +11,7 @@ import SingleItem from './Pages/SingleItem/SingleItem';
 import AllInventories from './Pages/AllInventories/AllInventories';
 import NotFound from './Pages/NotFound/NotFound';
 import AddNewItem from './Pages/AddNewItem/AddNewItem';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

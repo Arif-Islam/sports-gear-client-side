@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddNewItem = () => {
     const [name, setName] = useState('');
@@ -37,11 +39,13 @@ const AddNewItem = () => {
             },
             body: JSON.stringify(item),
         })
-        .then(res => res.json())
-        .then(data => {
-            event.target.reset();
-            console.log('item data', data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                event.target.reset();
+                console.log('item data', data);
+                toast('New Item added to inventories!');
+            })
+        
     }
 
     return (
@@ -51,7 +55,7 @@ const AddNewItem = () => {
                 <form onSubmit={handleAddItem} className='flex flex-col space-y-5'>
                     <input onBlur={getName} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="name" id="" placeholder='Name' />
 
-                    <input onBlur={getUrl} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="url" id="" name="image" placeholder='Image url'></input>
+                    <input onBlur={getUrl} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="url" id="" name="image" placeholder='Image direct link'></input>
 
                     <input onBlur={getPrice} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="price" id="" placeholder='Price' required />
 
@@ -64,6 +68,7 @@ const AddNewItem = () => {
                     <input className='bg-sky-600  font-medium text-stone-100 rounded h-10 hover:cursor-pointer hover:bg-sky-700' type="submit" value="Add Item" />
                 </form>
             </div>
+            <ToastContainer></ToastContainer>
         </div >
     );
 };
