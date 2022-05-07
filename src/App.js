@@ -29,7 +29,11 @@ function App() {
         }></Route>
         <Route path='/manageinventory' element={<AllInventories></AllInventories>}></Route>
         <Route path='/addnewitem' element={<AddNewItem></AddNewItem>}></Route>
-        <Route path='/myitems' element={<MyItem></MyItem>}></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItem></MyItem>
+          </RequireAuth>
+        }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>

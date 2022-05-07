@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import Spinner from '../../Shared/Spinner/Spinner';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -30,12 +31,16 @@ const Login = () => {
     const getPassword = event => {
         setPassword(event.target.value);
     }
-    if (user || googleUser) {
-        navigate(from, { replace: true });
-    }
-    const doLogIn = event => {
+    // if (googleUser) {
+    //     navigate(from, { replace: true });
+    // }
+    const doLogIn = async event => {
         event.preventDefault();
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        console.log('access token', data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
     const resetPassword = async () => {
         if (email) {

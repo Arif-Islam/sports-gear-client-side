@@ -8,8 +8,9 @@ const TabularItem = (props) => {
     const [user] = useAuthState(auth);
 
     const [items, setItems] = useState([]);
+    // const email = user?.email;
     useEffect(() => {
-        const email = user?.email;
+
         fetch(`http://localhost:5000/myitems?email=${email}`)
             .then(res => res.json())
             .then(data => setItems(data));
@@ -25,9 +26,9 @@ const TabularItem = (props) => {
                 .then(res => res.json())
                 .then(data => {
                     const remaining = items.filter(item => item._id !== id);
-                    console.log('remaining items', remaining, items);
+                    // console.log('remaining items', remaining, items);
                     setItems(remaining);
-                    console.log('items', items);
+                    // console.log('items', items);
                 })
         }
     }
