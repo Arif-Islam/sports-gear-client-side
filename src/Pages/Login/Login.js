@@ -31,14 +31,14 @@ const Login = () => {
     const getPassword = event => {
         setPassword(event.target.value);
     }
-    // if (googleUser) {
-    //     navigate(from, { replace: true });
-    // }
+    if (googleUser) {
+        navigate(from, { replace: true });
+    }
     const doLogIn = async event => {
         event.preventDefault();
         await signInWithEmailAndPassword(email, password);
         const { data } = await axios.post('http://localhost:5000/login', { email });
-        console.log('access token', data);
+        // console.log('access token', data);
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });
     }

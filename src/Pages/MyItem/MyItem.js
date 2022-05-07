@@ -24,9 +24,9 @@ const MyItem = () => {
             <div>
                 <p className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-10'>My Added Items</p>
                 {/* <p className='text-center'>{items.length} </p> */}
-                <div>
+                {/* <div>
                     user in my items {user?.email}
-                </div>
+                </div> */}
                 <div className='bg-gray-100 pt-6'>
                     <div className='w-full md:w-3/4 2xl:w-1/2 mx-auto'>
                         <div className='flex bg-gray-200 flex-wrap'>
