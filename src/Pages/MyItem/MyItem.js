@@ -12,7 +12,7 @@ const MyItem = () => {
         fetch(`http://localhost:5000/myitems?email=${email}`)
             .then(res => res.json())
             .then(data => setItems(data));
-    }, [user]);
+    }, [user, items]);
 
     return (
         <div>

@@ -1,27 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import useGetItems from '../../../hooks/useGetItems';
 
 const TabularItem = (props) => {
-    const { _id, name, image, price, quantity, supplier } = props.item;
-    
+    const { _id, name, email, image, price, quantity, supplier } = props.item;
+    const [user] = useAuthState(auth);
+
     const [items, setItems] = useState([]);
-    useEffect( () => {
-        fetch(`http://localhost:5000/myitems`)
-        .then(res => res.json())
-        .then(data => setItems(data))
-    },[]);
+    useEffect(() => {
+        const email = user?.email;
+        fetch(`http://localhost:5000/myitems?email=${email}`)
+            .then(res => res.json())
+            .then(data => setItems(data));
+    }, []);
 
     const deleteItem = id => {
+        // const email = user?.email;
         const remove = window.confirm('Are you sure you want to delete this item?');
-        if(remove){
-            fetch(`http://localhost:5000/myitems/${id}`, {
-                method: 'DELETE'
+        if (remove) {
+            fetch(`http://localhost:5000/myitems?email=${email}`, {
+                method: 'DELETE',
             })
-            .then(res => res.json())
-            .then(data => {
-                const remaining = items.filter(item => item._id !== id);
-                setItems(remaining);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = items.filter(item => item._id !== id);
+                    console.log('remaining items', remaining, items);
+                    setItems(remaining);
+                    console.log('items', items);
+                })
         }
     }
 
