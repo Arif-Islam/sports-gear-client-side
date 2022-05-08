@@ -1,8 +1,9 @@
 import React from 'react';
+import './Blogs.css';
 
 const Blogs = () => {
     return (
-        <div className='bg-gray-200 py-16'>
+        <div className='bg-gray-200 py-16 font-montserat'>
             <div className='w-11/12 lg:w-1/2 mx-auto'>
                 <div className='flex flex-col gap-10 justify-center items-center'>
                     <div className=''>

@@ -36,14 +36,14 @@ const Banner = () => {
             </Carousel>
             <div className='flex justify-center'>
                 <div className="absolute bottom-28">
-                    <button className='hover:cursor-text font-normal text-xl text-white border-2 w-80 mx-auto border-white py-1'>
+                    <button className='hover:cursor-text font-light text-xl text-white border-2 w-96 mx-auto border-white py-1 font-montserat'>
                         Premium Sports Gear Available
                     </button>
                 </div>
             </div>
             <div className="flex justify-center">
                 <div className='absolute bottom-14'>
-                    <button onClick={gotomanageinventory} className='font-medium text-xl text-black bg-white border-2 w-60 py-1 mx-auto border-white hover:text-white hover:bg-transparent hover:border-gray-800 uppercase'>
+                    <button onClick={gotomanageinventory} className=' text-xl text-black bg-white border-2 w-60 py-1 mx-auto border-white hover:text-white hover:bg-transparent hover:border-gray-800 uppercase font-montserat'>
                         See Inventory
                     </button>
                 </div>

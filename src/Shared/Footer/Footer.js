@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-gray-100'>
+        <div className='bg-gray-100 font-montserat'>
             <div className='w-full md:w-11/12 xl:w-3/4 mx-auto flex items-center py-6 justify-between  flex-col gap-5 md:flex-row'>
                 <div>
-                    <p className='font-medium text-gray-700'>© 2022 Dev—<span className='text-gray-600 font-normal'>@Md_Ariful_Islam</span></p>
+                    <p className='font-light text-gray-800'>© 2022 Dev—<span className='text-gray-700 font-medium'>@Md_Ariful_Islam</span></p>
                 </div>
                 <div className='flex space-x-3'>
                     <a target="_blank" href="https://facebook.com">

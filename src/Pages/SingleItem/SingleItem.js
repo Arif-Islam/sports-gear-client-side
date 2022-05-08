@@ -56,7 +56,7 @@ const SingleItem = () => {
     }
 
     return (
-        <div className='bg-gray-200 pb-10 2xl:pt-20 lg:h-screen'>
+        <div className='bg-gray-200 pb-10 2xl:pt-20 lg:h-screen font-montserat'>
             <div className='w-3/4 mx-auto pt-10'>
                 <div className='flex items-center justify-center flex-col xl:flex-row gap-14 md:gap-10'>
                     <div>

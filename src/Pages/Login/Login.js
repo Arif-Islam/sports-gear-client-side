@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo from '../../images/logo-removebg-preview.png';
+import logo from '../../images/logo image.png';
 import { BsGoogle } from "react-icons/bs";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -52,9 +52,16 @@ const Login = () => {
         }
     }
     return (
-        <div>
-            <div className='flex items-center justify-center my-6'>
-                <img className='w-44' src={logo} alt="" />
+        <div className='font-montserat'>
+            <div className='flex flex-col justify-center items-center my-6'>
+                <div>
+                    <Link to='/'>
+                        <img className='w-24' src={logo} alt="site logo" />
+                    </Link>
+                </div>
+                <div>
+                    <h1 className='text-xl'>Sport's Gear</h1>
+                </div>
             </div>
             {/* <p className='text-center text-2xl font-medium my-6'>Please Login</p> */}
             <div className='flex flex-col items-center justify-center'>
@@ -67,10 +74,10 @@ const Login = () => {
                 </form>
 
                 <div className='flex w-80'>
-                    <div className='text-sky-600 pt-3 font-medium mr-9'>
+                    <div className='text-sky-600 pt-3 font-medium  mr-3 tracking-tight'>
                         <Link to='/signup'>New to Sports Gear?</Link>
                     </div>
-                    <div className='text-red-600 pt-3'>
+                    <div className='text-red-600 pt-3  tracking-tight'>
                         <button onClick={resetPassword} className='font-medium'>Forgot Password?</button>
                     </div>
                 </div>

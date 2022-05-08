@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../../images/logo-removebg-preview.png';
+import logo from '../../images/logo image.png';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -42,9 +42,16 @@ const SignUp = () => {
     }
 
     return (
-        <div>
-            <div className='flex items-center justify-center my-6'>
-                <img className='w-44' src={logo} alt="" />
+        <div className='font-montserat'>
+            <div className='flex flex-col justify-center items-center my-6'>
+                <div>
+                    <Link to='/'>
+                        <img className='w-24' src={logo} alt="site logo" />
+                    </Link>
+                </div>
+                <div>
+                    <h1 className='text-xl'>Sport's Gear</h1>
+                </div>
             </div>
 
             <div className='flex flex-col items-center justify-center'>

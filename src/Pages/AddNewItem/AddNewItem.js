@@ -65,7 +65,7 @@ const AddNewItem = () => {
     }
 
     return (
-        <div>
+        <div className='font-montserat'>
             <p className='text-center text-2xl font-medium pt-6 pb-6 text-gray-800'>Fill out the form to add item to inventory</p>
             <div className='flex items-center justify-center mb-16'>
                 <form onSubmit={handleAddItem} className='flex flex-col space-y-5'>
@@ -75,7 +75,7 @@ const AddNewItem = () => {
 
                     <input onBlur={getPrice} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="price" id="" placeholder='Price' required />
 
-                    <input onBlur={getQuantity} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="quantity" id="" placeholder='Quantity' required />
+                    <input onBlur={getQuantity} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none ' type="text" name="quantity" id="" placeholder='Quantity' required />
 
                     <input onBlur={getSupplier} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="supplier" id="" placeholder='Supplier' required />
 

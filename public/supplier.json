@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Forex Trades",
+        "image": "https://i.ibb.co/BTRKh5R/Genius-Sports.jpg",
+        "description": "They are really great suppliers of our warehouse. They always deliver products in time and their products are always good.",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "name": "Bulk Demand",
+        "image": "https://i.ibb.co/Jm65hyV/champro.jpg",
+        "description": "They provide excellent service to our warehouse. They consistently deliver things on time and in good condition.",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Inventory Wholesale",
+        "image": "https://i.ibb.co/4M87mwt/sportcheck.png",
+        "description": "Our warehouse receives outstanding service from them. They always arrive on schedule and in excellent shape.",
+        "rating": 4.75
+    }
+]

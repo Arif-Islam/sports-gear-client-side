@@ -22,7 +22,7 @@ const MyItem = () => {
     return (
         <div>
             <div>
-                <p className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-10'>My Added Items</p>
+                <p className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-10'>My Added Items ({items.length})</p>
                 {/* <p className='text-center'>{items.length} </p> */}
                 {/* <div>
                     user in my items {user?.email}
