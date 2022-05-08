@@ -4,7 +4,6 @@ import './App.css';
 import Navbar from './Shared/Navbar/Navbar';
 import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
 import Login from './Pages/Login/Login';
 import Footer from './Shared/Footer/Footer';
 import SingleItem from './Pages/SingleItem/SingleItem';
@@ -36,7 +35,6 @@ function App() {
         }></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
-        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

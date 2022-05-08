@@ -21,7 +21,7 @@ const MyItem = () => {
 
     return (
         <div>
-            <div>
+            <div className='mb-80 lg:mb-0 lg:h-screen'>
                 <p className='text-center text-2xl lg:text-3xl font-semibold mt-10 mb-10'>My Added Items ({items.length})</p>
                 {/* <p className='text-center'>{items.length} </p> */}
                 {/* <div>
@@ -35,7 +35,8 @@ const MyItem = () => {
                             <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Price</p>
                             <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Quantity</p>
                             <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Supplier</p>
-                            <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50'>Remove Item</p>
+                            <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50 hidden md:block'>Remove Item</p>
+                            <p className='p-2 w-2/12 text-sm md:text-base font-semibold tracking-wide text-center border-x-[1px] md:border-x-2 border-gray-50 md:hidden'>Remove</p>
                         </div>
                     </div>
                     {

@@ -65,9 +65,9 @@ const AddNewItem = () => {
     }
 
     return (
-        <div className='font-montserat'>
-            <p className='text-center text-2xl font-medium pt-6 pb-6 text-gray-800'>Fill out the form to add item to inventory</p>
-            <div className='flex items-center justify-center mb-16'>
+        <div className='font-montserat lg:h-screen'>
+            <p className='text-center text-xl md:text-2xl font-medium pt-6 pb-6 text-gray-800'>Fill out the form to add item to inventory</p>
+            <div className='flex items-center justify-center mb-16 lg:mb-0'>
                 <form onSubmit={handleAddItem} className='flex flex-col space-y-5'>
                     <input onBlur={getName} className='w-80 h-12 bg-gray-100 rounded pl-4 text-stone-700 focus:outline-none' type="text" name="name" id="" placeholder='Name' />
 

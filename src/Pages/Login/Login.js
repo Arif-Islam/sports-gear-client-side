@@ -52,7 +52,7 @@ const Login = () => {
         }
     }
     return (
-        <div className='font-montserat'>
+        <div className='font-montserat lg:h-screen'>
             <div className='flex flex-col justify-center items-center my-6'>
                 <div>
                     <Link to='/'>
@@ -93,7 +93,7 @@ const Login = () => {
                 }
 
                 <hr className='w-80 mt-3 border-[1px] ' />
-                <div onClick={() => signInWithGoogle()} className='flex items-center mt-6 hover:cursor-pointer rounded-sm bg-stone-100 mb-6'>
+                <div onClick={() => signInWithGoogle()} className='flex items-center mt-6 hover:cursor-pointer rounded-sm bg-stone-100 mb-16 lg:mb-0'>
                     <div className='text-sky-600  bg-stone-100 p-2 rounded-full hover:bg-sky-600 hover:text-stone-100'>
                         <BsGoogle className='w-6 h-6 '></BsGoogle>
                     </div>

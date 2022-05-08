@@ -42,7 +42,7 @@ const SignUp = () => {
     }
 
     return (
-        <div className='font-montserat'>
+        <div className='font-montserat lg:h-screen'>
             <div className='flex flex-col justify-center items-center my-6'>
                 <div>
                     <Link to='/'>

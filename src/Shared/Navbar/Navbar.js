@@ -19,7 +19,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='bg-gray-100 lg:bg-sky-50 sticky top-0 z-20 py-2 font-montserat'>
+        <div className='bg-gray-100 sticky top-0 z-20 py-2 font-montserat'>
             <div className='hidden lg:block'>
                 <div className='flex items-center justify-between'>
                     <div className='w-1/3 mx-auto'>
@@ -98,7 +98,7 @@ const Navbar = () => {
                         </div>
                     }
                 </div>
-                <div className={(showNav ? "top-[75px] bg-gray-100" : "-top-full") + " fixed text-black h-[230px] rounded w-full space-y-3 items-center transition-top duration-500 ease-in-out text-center"}>
+                <div className={(showNav ? "top-[75px] bg-gray-100" : "-top-full") + " fixed text-black h-[260px] rounded w-full space-y-3 items-center transition-top duration-500 ease-in-out text-center"}>
                     <div className='mt-2 md:mt-0 hover:text-[#0E9CF6]'>
                         <NavLink to='/'>Home</NavLink>
                     </div>

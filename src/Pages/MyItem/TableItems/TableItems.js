@@ -35,8 +35,8 @@ const TabularItem = (props) => {
 
     return (
         <div className=''>
-            <div className="bg-gray-100">
-                <div className="rounded-lg shadow ">
+            <div className="bg-gray-100 ">
+                <div className="rounded-lg  ">
                     <div className='w-full md:w-3/4 2xl:w-1/2 mx-auto'>
                         <div className='flex bg-white'>
                             <div className='w-2/12 border-[1px] md:border-2 border-gray-100'>
