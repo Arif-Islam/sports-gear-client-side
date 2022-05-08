@@ -15,7 +15,7 @@ const Navbar = () => {
     const doSignOut = () => {
         console.log('signed out', user);
         signOut(auth);
-        navigate('/blogs');
+        navigate('/login');
     }
 
     return (
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 <NavLink to='/myitems'>My Items</NavLink>
                             </div>
                             <div onClick={doSignOut} className='hover:text-[#0E9CF6]'>
-                                <NavLink to='/blogs'>Logout</NavLink>
+                                <NavLink to='/login'>Logout</NavLink>
                             </div>
                         </>
                             : <div className='hover:text-[#0E9CF6]'>
