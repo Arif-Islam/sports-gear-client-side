@@ -4,10 +4,10 @@ const useGetItems = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/items`)
-        .then(res => res.json())
-        .then(data => setItems(data))
-    },[]);
+        fetch(`https://sports-gear-server.herokuapp.com/items`)
+            .then(res => res.json())
+            .then(data => setItems(data))
+    }, []);
 
     return [items, setItems];
 }

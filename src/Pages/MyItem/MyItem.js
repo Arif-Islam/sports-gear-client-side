@@ -10,7 +10,7 @@ const MyItem = () => {
     const email = user?.email;
     useEffect(() => {
 
-        fetch(`http://localhost:5000/myitems?email=${email}`, {
+        fetch(`https://sports-gear-server.herokuapp.com/myitems?email=${email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

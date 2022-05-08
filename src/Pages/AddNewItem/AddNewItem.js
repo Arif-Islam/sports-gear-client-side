@@ -39,7 +39,7 @@ const AddNewItem = () => {
 
     const email = user?.email;
     // if (user) {
-        // setEmail(user.email);
+    // setEmail(user.email);
     // }
     console.log('user', user);
     // if(user == null){
@@ -49,7 +49,7 @@ const AddNewItem = () => {
     const handleAddItem = event => {
         event.preventDefault();
         const item = { name, email, image, price, quantity, supplier, description };
-        fetch('http://localhost:5000/items', {
+        fetch('https://sports-gear-server.herokuapp.com/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

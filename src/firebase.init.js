@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAldKkqf3hxNp2wIjJhTrwM2IJ-vJIXHE0",
-  authDomain: "sports-gear-6d1f5.firebaseapp.com",
-  projectId: "sports-gear-6d1f5",
-  storageBucket: "sports-gear-6d1f5.appspot.com",
-  messagingSenderId: "707212113465",
-  appId: "1:707212113465:web:72943a768553c54aaaffe8"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

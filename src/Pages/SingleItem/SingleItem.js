@@ -7,7 +7,7 @@ const SingleItem = () => {
     const { id } = useParams();
     const [item, setItem] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/items/${id}`)
+        fetch(`https://sports-gear-server.herokuapp.com/items/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [item]);
@@ -19,7 +19,7 @@ const SingleItem = () => {
         // console.log(quantity);
         const updatedDetail = { quantity };
         // console.log(updatedDetail);
-        fetch(`http://localhost:5000/items/${id}`, {
+        fetch(`https://sports-gear-server.herokuapp.com/items/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -42,7 +42,7 @@ const SingleItem = () => {
         console.log(quantity);
         const updatedDetail = { quantity };
         console.log(updatedDetail);
-        fetch(`http://localhost:5000/items/${id}`, {
+        fetch(`https://sports-gear-server.herokuapp.com/items/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

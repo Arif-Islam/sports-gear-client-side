@@ -6,15 +6,15 @@ const TabularItem = (props) => {
     const [items, setItems] = useGetItems();
     const deleteItem = id => {
         const remove = window.confirm('Are you sure you want to delete this item?');
-        if(remove){
-            fetch(`http://localhost:5000/items/${id}`, {
+        if (remove) {
+            fetch(`https://sports-gear-server.herokuapp.com/items/${id}`, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                const remaining = items.filter(item => item._id !== id);
-                setItems(remaining);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = items.filter(item => item._id !== id);
+                    setItems(remaining);
+                })
         }
     }
 

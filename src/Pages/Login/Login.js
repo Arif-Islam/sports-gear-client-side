@@ -37,7 +37,7 @@ const Login = () => {
     const doLogIn = async event => {
         event.preventDefault();
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('http://localhost:5000/login', { email });
+        const { data } = await axios.post('https://sports-gear-server.herokuapp.com/login', { email });
         // console.log('access token', data);
         localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });

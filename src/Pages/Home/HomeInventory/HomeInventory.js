@@ -14,7 +14,7 @@ const HomeInventory = () => {
 
     useEffect(() => {
         // setLoading(true);
-        fetch('http://localhost:5000/items')
+        fetch('https://sports-gear-server.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data));
         setLoading(false);

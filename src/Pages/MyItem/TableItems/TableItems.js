@@ -11,7 +11,7 @@ const TabularItem = (props) => {
     // const email = user?.email;
     useEffect(() => {
 
-        fetch(`http://localhost:5000/myitems?email=${email}`)
+        fetch(`https://sports-gear-server.herokuapp.com/myitems?email=${email}`)
             .then(res => res.json())
             .then(data => setItems(data));
     }, []);
@@ -20,7 +20,7 @@ const TabularItem = (props) => {
         // const email = user?.email;
         const remove = window.confirm('Are you sure you want to delete this item?');
         if (remove) {
-            fetch(`http://localhost:5000/myitems?email=${email}`, {
+            fetch(`https://sports-gear-server.herokuapp.com/myitems?email=${email}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
