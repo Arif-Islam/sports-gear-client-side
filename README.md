@@ -1,6 +1,6 @@
 # Sports Gear
 
-[Live Site Link](https://sports-gear-6d1f5.web.app/).
+[Sports Gear Live Site](https://sports-gear-6d1f5.web.app/)
 
 <h3>About the site</h3>
 <p>Sports Gear is a warehouse where one can find their desired gears. We have a lot of sports gear collection in our inventory. These gears come from well known suppliers. We have enough quantity of each gear in our inventory. Sports Gear warehouse is big and it is maintained very nicely. </p>
