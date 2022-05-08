@@ -31,16 +31,16 @@ const Login = () => {
     const getPassword = event => {
         setPassword(event.target.value);
     }
-    if (googleUser) {
+    if (user || googleUser) {
         navigate(from, { replace: true });
     }
     const doLogIn = async event => {
         event.preventDefault();
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('https://sports-gear-server.herokuapp.com/login', { email });
+        // const { data } = await axios.post('https://sports-gear-server.herokuapp.com/login', { email });
         // console.log('access token', data);
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+        // localStorage.setItem('accessToken', data.accessToken);
+        // navigate(from, { replace: true });
     }
     const resetPassword = async () => {
         if (email) {

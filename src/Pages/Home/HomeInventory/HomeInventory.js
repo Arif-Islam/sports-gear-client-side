@@ -6,7 +6,7 @@ import './HomeInventory.css';
 
 const HomeInventory = () => {
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const goToManageInventory = () => {
         navigate('/manageinventory');
@@ -17,7 +17,7 @@ const HomeInventory = () => {
         fetch('https://sports-gear-server.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setItems(data));
-        setLoading(false);
+        setLoading(true);
     }, []);
 
     return (
@@ -28,7 +28,7 @@ const HomeInventory = () => {
             <div className="bg-white mt-10 pt-6">
                 <div className='w-4/5 mx-auto pb-16'>
                     {
-                        !loading ?
+                        loading ?
                             <div className='flex gap-10 flex-wrap items-center justify-center'>
                                 {
                                     items.slice(0, 6).map(item => <ItemCard
